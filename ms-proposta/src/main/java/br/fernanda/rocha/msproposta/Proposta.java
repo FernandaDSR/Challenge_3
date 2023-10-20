@@ -60,6 +60,8 @@ public class Proposta {
     }
 
     public void setDataCriacao(Date date) {
+        this.dataCriacao = date;
+
     }
 
     public boolean isVotacaoExpirada(Date now) {
