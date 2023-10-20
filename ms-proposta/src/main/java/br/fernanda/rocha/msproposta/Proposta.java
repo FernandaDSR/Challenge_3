@@ -72,16 +72,12 @@ public class Proposta {
 
     public boolean isVotacaoExpirada() {
         if (dataCriacao != null && tempoDuracao > 0) {
-
             Date now = new Date();
             Date dataExpiracao = new Date(dataCriacao.getTime() + tempoDuracao * 60 * 1000);
-
-
             return now.after(dataExpiracao);
         }
-
-
-        return true;
+        // Se dataCriacao ou tempoDuracao não estiverem definidos, a votação não está expirada
+        return false;
     }
 
 
