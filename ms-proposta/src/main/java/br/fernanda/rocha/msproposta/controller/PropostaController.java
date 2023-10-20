@@ -23,9 +23,6 @@ public class PropostaController {
     @PostMapping
     public ResponseEntity<MensagemResposta> criarProposta(@RequestBody Proposta proposta) {
 
-        proposta.setDataCriacao(new Date());
-        proposta.setTempoDuracao(1);
-
         Proposta novaProposta = propostaService.criarProposta(proposta);
 
         if (novaProposta.getId() != null) {

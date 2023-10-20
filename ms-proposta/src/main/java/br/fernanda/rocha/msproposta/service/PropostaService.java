@@ -19,6 +19,8 @@ public class PropostaService {
 
     public Proposta criarProposta(Proposta proposta) {
 
+        proposta.setDataCriacao(new Date());
+
         return propostaRepository.save(proposta);
     }
 
